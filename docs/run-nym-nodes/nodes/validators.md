@@ -187,9 +187,18 @@ Prerequisites:
 
 Choose a name for your validator and use it in place of `yourname` in the following command:
 
-```
-nymd init yourname --chain-id nym-sandbox
-```
+<Tabs groupId="nym-network">
+  <TabItem value="sandbox" label="Sandbox (Testnet)">
+    <pre>
+      nymd init <yourname> --chain-id=nym-sandbox 
+    </pre>
+  </TabItem>
+    <TabItem value="mainnet" label="Nyx (Mainnet)">
+    <pre>
+      nymd init <yourname> --chain-id=nym 
+    </pre>
+  </TabItem>
+</Tabs>
 
 :::caution
 `nymd init` generates `priv_validator_key.json` and `node_key.json`.  
@@ -243,7 +252,7 @@ there is no way to deterministically (re)generate this key using `nymd`.
       cors_allowed_origins = ["*"] 
     </pre>
     <pre>
-      persistent_peers = "0a54f8f793427d3269b7a1d552bd11214f37990e@sandbox-validator.nymtech.net:26656" 
+      persistent_peers = "0a54f8f793427d3269b7a1d552bd11214f37990e@nym-mainnet.commodum.io:26656" 
     </pre>
     <pre>
       create_empty_blocks = false 
